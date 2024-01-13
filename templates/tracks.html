@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block links %}
+    
+{% endblock links %}
+
+
+{% block content %}
+    <a href="/tracks/add">Add track</a>
+    <table class="table">
+        <tr>
+            <th>Назва</th>
+            <th>Рік створення</th>
+        </tr>
+    {% for track in tracks %}
+        <tr>
+            <td>{{ track.title }} </td>
+            <td>{{ track.year }} </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock content %}
