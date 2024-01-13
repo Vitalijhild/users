@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block links %}
+    
+{% endblock links %}
+
+
+{% block content %}
+    <a href="/authors/add">Add author</a>
+    <table class="table">
+        <tr>
+            <th>Автор</th>
+        </tr>
+    {% for author in authors %}
+        <tr>
+            <td><a href="/tracks/{{ author.id }}">{{ author.name }}</a> </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock content %}
